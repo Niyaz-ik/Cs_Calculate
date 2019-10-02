@@ -35,13 +35,13 @@ namespace Lab_1
 
             while(!b2){
             do{
-            Console.WriteLine("Write a sign(+, -, *, /, %, ^, a(and), o(or), x(xor)):");
+            Console.WriteLine("Write a sign(+, -, *, /, %, ^, a(and), o(or), x(xor), i(inversion)):");
             string s = Console.ReadLine();
             b1 = char.TryParse(s, out sign);
-            if (!b1){ Console.WriteLine("Error! Write a correct sign: +, -, *, /, %, ^, a(and), o(or), x(xor)"); }
+            if (!b1){ Console.WriteLine("Error! Write a correct sign: +, -, *, /, %, ^, a(and), o(or), x(xor), i(inversion)"); }
             }while (!b1);
-            if (sign == '+' || sign == '-' || sign == '*' || sign == '/' || sign == '%' || sign == '^'  || sign == 'a' || sign == 'o' || sign == 'x'){   b2 = true; }
-            if (!b2){ Console.WriteLine("Error! Write a correct sign: +, -, *, /, %, ^, a(and), o(or), x(xor)");  }
+            if (sign == '+' || sign == '-' || sign == '*' || sign == '/' || sign == '%' || sign == '^'  || sign == 'a' || sign == 'o' || sign == 'x' || sign == 'i'){   b2 = true; }
+            if (!b2){ Console.WriteLine("Error! Write a correct sign: +, -, *, /, %, ^, a(and), o(or), x(xor), i(inversion)");  }
             }
 
             do{
@@ -115,6 +115,12 @@ namespace Lab_1
                         calculatedop.Xor(ref n3, ref n4);
                         WriteXor(n3);
                     break; 
+                    case 'i':
+                        n3 = (int) n1;
+                        n4 = (int) n2;
+                        calculatedop.Inversion(ref n3, ref n4);
+                        WriteInversion(n3);
+                    break; 
                 }
         }
 
@@ -157,6 +163,10 @@ namespace Lab_1
             Console.WriteLine(result);
         }
         static void WriteXor(double result){
+            Console.WriteLine("Your result: ");
+            Console.WriteLine(result);
+        }
+        static void WriteInversion(double result){
             Console.WriteLine("Your result: ");
             Console.WriteLine(result);
         }

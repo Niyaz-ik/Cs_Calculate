@@ -19,6 +19,9 @@ namespace Lab_1
             n1 = n1 ^ n2;
             return n1;
         }
-
+        public double Inversion(ref dynamic n1, ref dynamic n2){
+            n1 = n1 ^ n2;
+            return n1;
+        }
     }
 }
