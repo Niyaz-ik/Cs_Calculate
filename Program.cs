@@ -10,7 +10,7 @@ namespace Lab_1
     {
         static Calculate calculate = new Calculate();
         static CalculateDop calculatedop = new CalculateDop();
-        
+
 /// <summary>
 /// Это главный метод программы. Здесь находится интерфейс программы и логика взаимодействия программы с пользователем
 /// </summary>
@@ -92,6 +92,18 @@ namespace Lab_1
                         calculate.Residue(ref n1, ref n2);
                         WriteResidue(n1);
                     break;  
+                    case '^':
+                        calculatedop.Pow(ref n1, ref n2);
+                        WritePow(n1);
+                    break; 
+                    case 'a':
+                        dynamic n3, n4;
+                        n3 = (int) n1;
+                        n4 = (int) n2;
+                        calculatedop.And(ref n3, ref n4);
+                        WriteAnd(n3);
+                    break; 
+
                 }
         }
 
