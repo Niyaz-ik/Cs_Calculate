@@ -35,13 +35,13 @@ namespace Lab_1
 
             while(!b2){
             do{
-            Console.WriteLine("Write a sign(+, -, *, /, %, ^, a(and), o(or)):");
+            Console.WriteLine("Write a sign(+, -, *, /, %, ^, a(and), o(or), x(xor)):");
             string s = Console.ReadLine();
             b1 = char.TryParse(s, out sign);
-            if (!b1){ Console.WriteLine("Error! Write a correct sign: +, -, *, /, %, ^, a(and), o(or)"); }
+            if (!b1){ Console.WriteLine("Error! Write a correct sign: +, -, *, /, %, ^, a(and), o(or), x(xor)"); }
             }while (!b1);
-            if (sign == '+' || sign == '-' || sign == '*' || sign == '/' || sign == '%' || sign == '^'  || sign == 'a' || sign == 'o' ){   b2 = true; }
-            if (!b2){ Console.WriteLine("Error! Write a correct sign: +, -, *, /, %, ^, a(and), o(or)");  }
+            if (sign == '+' || sign == '-' || sign == '*' || sign == '/' || sign == '%' || sign == '^'  || sign == 'a' || sign == 'o' || sign == 'x'){   b2 = true; }
+            if (!b2){ Console.WriteLine("Error! Write a correct sign: +, -, *, /, %, ^, a(and), o(or), x(xor)");  }
             }
 
             do{
@@ -103,7 +103,18 @@ namespace Lab_1
                         calculatedop.And(ref n3, ref n4);
                         WriteAnd(n3);
                     break; 
-
+                    case 'o':
+                        n3 = (int) n1;
+                        n4 = (int) n2;
+                        calculatedop.Or(ref n3, ref n4);
+                        WriteOr(n3);
+                    break;   
+                     case 'x':
+                        n3 = (int) n1;
+                        n4 = (int) n2;
+                        calculatedop.Xor(ref n3, ref n4);
+                        WriteXor(n3);
+                    break; 
                 }
         }
 
