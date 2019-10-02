@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\4erep\\Documents\\GitHub\\Lab_1.csproj": {}
+    "C:\\Users\\4erep\\Documents\\GitHub\\Cs_Calculate\\Lab_1.csproj": {}
   },
   "projects": {
-    "c:\\Users\\4erep\\Documents\\GitHub\\Lab_1.csproj": {
+    "C:\\Users\\4erep\\Documents\\GitHub\\Cs_Calculate\\Lab_1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\4erep\\Documents\\GitHub\\Lab_1.csproj",
+        "projectUniqueName": "C:\\Users\\4erep\\Documents\\GitHub\\Cs_Calculate\\Lab_1.csproj",
         "projectName": "Lab_1",
-        "projectPath": "c:\\Users\\4erep\\Documents\\GitHub\\Lab_1.csproj",
+        "projectPath": "C:\\Users\\4erep\\Documents\\GitHub\\Cs_Calculate\\Lab_1.csproj",
         "packagesPath": "C:\\Users\\4erep\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\4erep\\Documents\\GitHub\\obj\\",
+        "outputPath": "C:\\Users\\4erep\\Documents\\GitHub\\Cs_Calculate\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
