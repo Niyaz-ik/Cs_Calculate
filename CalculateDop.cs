@@ -1,5 +1,8 @@
 using System;
 
+/// <summary>
+/// Это класс с дополнительными функциями для калькулятора
+/// </summary>
 namespace Lab_1
 {
     public class CalculateDop{
