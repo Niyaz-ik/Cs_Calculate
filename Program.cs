@@ -9,6 +9,7 @@ namespace Lab_1
     class Program
     {
         static Calculate calculate = new Calculate();
+        static CalculateDop calculatedop = new CalculateDop();
         
 /// <summary>
 /// Это главный метод программы. Здесь находится интерфейс программы и логика взаимодействия программы с пользователем
