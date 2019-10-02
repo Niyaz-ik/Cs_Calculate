@@ -9,7 +9,8 @@ namespace Lab_1
     class Program
     {
         static Calculate calculate = new Calculate();
-        
+        static CalculateDop calculatedop = new CalculateDop();
+
 /// <summary>
 /// Это главный метод программы. Здесь находится интерфейс программы и логика взаимодействия программы с пользователем
 /// </summary>
@@ -34,13 +35,13 @@ namespace Lab_1
 
             while(!b2){
             do{
-            Console.WriteLine("Write a sign(+, -, *, /, %, ^, a(and), o(or)):");
+            Console.WriteLine("Write a sign(+, -, *, /, %, ^, a(and), o(or), x(xor), i(inversion)):");
             string s = Console.ReadLine();
             b1 = char.TryParse(s, out sign);
-            if (!b1){ Console.WriteLine("Error! Write a correct sign: +, -, *, /, %, ^, a(and), o(or)"); }
+            if (!b1){ Console.WriteLine("Error! Write a correct sign: +, -, *, /, %, ^, a(and), o(or), x(xor), i(inversion)"); }
             }while (!b1);
-            if (sign == '+' || sign == '-' || sign == '*' || sign == '/' || sign == '%' || sign == '^'  || sign == 'a' || sign == 'o' ){   b2 = true; }
-            if (!b2){ Console.WriteLine("Error! Write a correct sign: +, -, *, /, %, ^, a(and), o(or)");  }
+            if (sign == '+' || sign == '-' || sign == '*' || sign == '/' || sign == '%' || sign == '^'  || sign == 'a' || sign == 'o' || sign == 'x' || sign == 'i'){   b2 = true; }
+            if (!b2){ Console.WriteLine("Error! Write a correct sign: +, -, *, /, %, ^, a(and), o(or), x(xor), i(inversion)");  }
             }
 
             do{
@@ -91,6 +92,35 @@ namespace Lab_1
                         calculate.Residue(ref n1, ref n2);
                         WriteResidue(n1);
                     break;  
+                    case '^':
+                        calculatedop.Pow(ref n1, ref n2);
+                        WritePow(n1);
+                    break; 
+                    case 'a':
+                        dynamic n3, n4;
+                        n3 = (int) n1;
+                        n4 = (int) n2;
+                        calculatedop.And(ref n3, ref n4);
+                        WriteAnd(n3);
+                    break; 
+                    case 'o':
+                        n3 = (int) n1;
+                        n4 = (int) n2;
+                        calculatedop.Or(ref n3, ref n4);
+                        WriteOr(n3);
+                    break;   
+                     case 'x':
+                        n3 = (int) n1;
+                        n4 = (int) n2;
+                        calculatedop.Xor(ref n3, ref n4);
+                        WriteXor(n3);
+                    break; 
+                    case 'i':
+                        n3 = (int) n1;
+                        n4 = (int) n2;
+                        calculatedop.Inversion(ref n3, ref n4);
+                        WriteInversion(n3);
+                    break; 
                 }
         }
 
@@ -133,6 +163,10 @@ namespace Lab_1
             Console.WriteLine(result);
         }
         static void WriteXor(double result){
+            Console.WriteLine("Your result: ");
+            Console.WriteLine(result);
+        }
+        static void WriteInversion(double result){
             Console.WriteLine("Your result: ");
             Console.WriteLine(result);
         }
