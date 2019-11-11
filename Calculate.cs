@@ -24,6 +24,7 @@ namespace Lab_1
             n1%= n2;
             return n1;
             // test comment 123
+            // kekss
         }
     }
 }
